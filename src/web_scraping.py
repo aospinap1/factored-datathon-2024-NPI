@@ -1,8 +1,8 @@
 import re
-import utils
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
+import utils
 
 def extract_file_info(element, date=None, file_status=0):
     """

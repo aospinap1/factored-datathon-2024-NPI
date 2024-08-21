@@ -2,5 +2,5 @@
 *.env
 *.csv
 *.CSVdata/
-.DS_Store
-.DS_Store
+*.DS_Store
+*.html

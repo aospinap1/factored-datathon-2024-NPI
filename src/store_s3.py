@@ -1,8 +1,8 @@
 import os
 import boto3
+from dotenv import load_dotenv
 import process_data
 import constants
-from dotenv import load_dotenv
 
 def connect_store_s3(bucket_name: str, folder_name: str, file_path: str, file_name: str, region_name: str = "us-east-2"):
     """
