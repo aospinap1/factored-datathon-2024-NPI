@@ -21,3 +21,18 @@ def generate_date_range(start_date: str, end_date: str) -> list[str]:
     if num_days < 0:
         raise ValueError("End date must be greater or equal than to start date.")
     return [(start + timedelta(days=i)).strftime("%Y%m%d") for i in range(num_days + 1)]
+
+def get_num_days(start_date: str) -> int:
+    """
+    Calculate the number of days between the given start date and today's date.
+
+    Parameters:
+    start_date (str): The start date in the format 'YYYYMMDD'.
+
+    Returns:
+    int: The number of days between the start date and today's date.
+    """
+    start = datetime.strptime(start_date, "%Y%m%d").date()
+    end = datetime.today().date()
+    num_days = (end - start).days
+    return num_days
