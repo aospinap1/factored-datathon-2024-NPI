@@ -31,8 +31,19 @@ def get_num_days(start_date: str) -> int:
 
     Returns:
     int: The number of days between the start date and today's date.
+
+    Raises:
+    ValueError: If the start date is not in the correct format or is in the future.
     """
-    start = datetime.strptime(start_date, "%Y%m%d").date()
+    try:
+        start = datetime.strptime(start_date, "%Y%m%d").date()
+    except ValueError as e:
+        raise ValueError("Start date must be in 'YYYYMMDD' format") from e
+
     end = datetime.today().date()
+    
+    if start > end:
+        raise ValueError("Start date cannot be in the future")
+
     num_days = (end - start).days
     return num_days

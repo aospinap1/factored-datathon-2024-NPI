@@ -2,6 +2,7 @@ import os
 import json
 import constants
 import download_data_files
+import store_s3
 
 def main():
     """
@@ -26,6 +27,18 @@ def main():
     )
 
     print("The files have been stored successfully.")
+
+    print("Starting the files migration to S3..")
+
+    store_s3.store_s3(
+        params["topic_filter"]["bucket_name"],
+        params["topic_filter"]["column_name"],
+        params["topic_filter"]["topics"]
+    )
+
+    print("The files have been migrated successfully.")
+
+
 
 if __name__ == "__main__":
     main()
