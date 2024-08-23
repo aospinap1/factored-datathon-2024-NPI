@@ -1,8 +1,12 @@
 # Ignore all .env files
 *.env
-*.csv
-*.CSV
+# Ignore all .csv files
+*.{csv,CSV}
+# Ignore all .Ds_Store files
 *.DS_Store
+# Ignore all .html files
 *.html
+# Ignore all .ipynb files
 *.ipynb
-\env
+# Ignore env folder
+**\env
