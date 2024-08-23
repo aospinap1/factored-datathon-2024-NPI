@@ -4,3 +4,5 @@
 *.CSVdata/
 *.DS_Store
 *.html
+*.ipynb
+\env
