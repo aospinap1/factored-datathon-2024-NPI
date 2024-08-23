@@ -1,7 +1,7 @@
 # Ignore all .env files
 *.env
 *.csv
-*.CSVdata/
+*.CSV
 *.DS_Store
 *.html
 *.ipynb
